@@ -1,0 +1,37 @@
+Container: container_1761119194299_0026_01_000001 on vm-99230800_40415
+LogAggregationType: AGGREGATED
+======================================================================
+LogType:stdout-active
+LogLastModifiedTime:Wed Oct 22 09:06:02 +0000 2025
+LogLength:2884
+LogContents:
+2025-10-22 09:06:01,937 INFO UserConsole [redirect output]: 2025-10-22 09:06:01 | INFO: Arguments instantiated: {'run_id': 'b3ffbab0-9bb7-425d-b511-39b9e56456c6', 'key_vault_name': 'MetEdwKeyVaultProd', 'key_vault_linked_service_name': 'MET_EDW_KeyVault', 'sql_password_secret_name': 'ProcfwkSqlDbPassword', 'sql_host_name': 'bdaprodsql.public.35133d2c7131.database.windows.net', 'sql_port': '3342', 'sql_database': 'S_procfrwk', 'sql_user': 'procfwk-user', 'source_data_source': ['domain_inventory'], 'target_data_source': 'fact_spark_database', 'load_definitions': ['fact_inventory_transactions'], 'restart': None, 'sequential': None}
+
+2025-10-22 09:06:02,137 INFO UserConsole [redirect output]: Traceback (most recent call last):
+  File "/mnt/var/hadoop/tmp/nm-local-dir/usercache/trusted-service-user/appcache/application_1761119194299_0026/container_1761119194299_0026_01_000001/main.py", line 302, in <module>
+
+2025-10-22 09:06:02,143 INFO UserConsole [redirect output]:     from spark_helpers import functions as func
+  File "spark_helpers.zip/spark_helpers/functions.py", line 12, in <module>
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/azure/storage/blob/__init__.py", line 10, in <module>
+    from ._blob_client import BlobClient
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/azure/storage/blob/_blob_client.py", line 59, in <module>
+    from ._download import StorageStreamDownloader
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/azure/storage/blob/_download.py", line 20, in <module>
+    from ._encryption import (
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/azure/storage/blob/_encryption.py", line 21, in <module>
+    from cryptography.hazmat.primitives.ciphers import Cipher
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/__init__.py", line 11, in <module>
+    from cryptogr
+2025-10-22 09:06:02,144 INFO UserConsole [redirect output]: aphy.hazmat.primitives.ciphers.base import (
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/cryptography/hazmat/primitives/ciphers/base.py", line 10, in <module>
+    from cryptography.exceptions import (
+  File "/home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/cryptography/exceptions.py", line 9, in <module>
+    from cryptography.hazmat.bindings._rust import exceptions as rust_exceptions
+ImportError: /home/trusted-service-user/cluster-env/env/lib/python3.10/lib-dynload/../../libcrypto.so.3: version `OPENSSL_3.3.0' not found (required by /home/trusted-service-user/cluster-env/env/lib/python3.10/site-packages/cryptography/hazmat/bindings/../../../../../libssl.so.3)
+
+2025-10-22 09:06:02,289 INFO UserConsole [pool-41-thread-1]: Calling LA appender v2 Stop...
+
+
+End of LogType:stdout-active
+******************************************************************************
+
